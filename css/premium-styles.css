@@ -31,6 +31,14 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    overflow: visible;
+}
+
+/* Prevent text overflow in containers */
+.container * {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 @media (max-width: 768px) {
@@ -518,4 +526,54 @@ footer {
 /* Counter Styles */
 .counter-value {
     font-variant-numeric: tabular-nums;
+}
+
+/* Text container fixes */
+.text-container {
+    overflow: visible;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+/* Button fixes */
+.btn-primary, .btn-glow, button {
+    overflow: visible;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: 44px;
+}
+
+/* Card content fixes */
+.card-content {
+    overflow: visible;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Service card text */
+.service-card p,
+.testimonial-card p,
+.contact-form p {
+    overflow: visible;
+    text-overflow: clip;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+/* Hero text fixes */
+.hero-title,
+.hero-subtitle {
+    overflow: visible;
+    text-overflow: clip;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Stats fixes */
+.stat-card p {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    word-wrap: break-word;
 }
