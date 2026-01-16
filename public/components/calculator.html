@@ -1,0 +1,88 @@
+<!-- BTU Calculator Section -->
+<section class="btu-calculator-section py-20 px-4 bg-gradient-to-br from-primary/5 to-accent-orange/5" id="calculator">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-[#0d131b] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight mb-4">
+                Calculadora de BTU Inteligente
+            </h2>
+            <div class="h-2 w-20 bg-primary rounded-full mx-auto mb-6"></div>
+            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                Encuentra el equipo ideal para tu espacio en Santiago en menos de 1 minuto.
+            </p>
+        </div>
+
+        <div class="calculator-card bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-8">
+            <!-- Segmented Control for Usage -->
+            <div class="mb-8">
+                <label class="block text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">Tipo de Ambiente</label>
+                <div class="flex h-14 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 p-2">
+                    <label class="usage-type flex cursor-pointer h-full grow items-center justify-center rounded-lg px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-base font-semibold transition-all">
+                        <span class="truncate">Residencial</span>
+                        <input checked class="invisible w-0" name="usage-type" type="radio" value="residencial"/>
+                    </label>
+                    <label class="usage-type flex cursor-pointer h-full grow items-center justify-center rounded-lg px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-base font-semibold transition-all">
+                        <span class="truncate">Comercial</span>
+                        <input class="invisible w-0" name="usage-type" type="radio" value="comercial"/>
+                    </label>
+                    <label class="usage-type flex cursor-pointer h-full grow items-center justify-center rounded-lg px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-base font-semibold transition-all">
+                        <span class="truncate">Industrial</span>
+                        <input class="invisible w-0" name="usage-type" type="radio" value="industrial"/>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Slider for M2 -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <label class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Superficie (m²)</label>
+                    <span class="btu-value text-2xl font-bold text-primary">35 m²</span>
+                </div>
+                <div class="relative">
+                    <input type="range" id="m2-slider" min="10" max="200" value="35" 
+                           class="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer slider">
+                    <div class="flex justify-between text-xs text-slate-400 font-medium mt-2">
+                        <span>10 m²</span>
+                        <span>100 m²</span>
+                        <span>200+ m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="mb-8 space-y-4">
+                <label class="flex items-center gap-3 cursor-pointer">
+                    <input type="checkbox" class="w-5 h-5 text-primary rounded focus:ring-primary">
+                    <span class="text-slate-700 dark:text-slate-300">Espacio con mucha exposición solar</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                    <input type="checkbox" class="w-5 h-5 text-primary rounded focus:ring-primary">
+                    <span class="text-slate-700 dark:text-slate-300">Techo alto (más de 3 metros)</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                    <input type="checkbox" class="w-5 h-5 text-primary rounded focus:ring-primary">
+                    <span class="text-slate-700 dark:text-slate-300">Más de 4 personas habitualmente</span>
+                </label>
+            </div>
+
+            <!-- Dynamic Result -->
+            <div class="btu-result bg-gradient-to-r from-primary/10 to-accent-orange/10 rounded-xl p-6 border border-primary/20 mb-8">
+                <div class="flex items-center justify-between gap-6">
+                    <div class="flex-1">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-semibold uppercase mb-2">Capacidad Recomendada</p>
+                        <p class="btu-recommendation text-primary text-4xl font-extrabold tracking-tight mb-2">12,000 BTU</p>
+                        <p class="btu-description text-slate-600 dark:text-slate-400 text-sm leading-snug">Ideal para dormitorios grandes y salas de estar estándar.</p>
+                    </div>
+                    <div class="btu-icon size-20 rounded-full bg-gradient-to-br from-primary to-accent-orange flex items-center justify-center text-white shadow-lg shrink-0">
+                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btu-cta w-full bg-gradient-to-r from-primary to-accent-orange hover:from-primary/90 hover:to-accent-orange/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 text-lg" onclick="scrollToSection('contact')">
+                <span class="material-symbols-outlined">calendar_today</span>
+                Solicitar Cotización Exacta
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+</section>

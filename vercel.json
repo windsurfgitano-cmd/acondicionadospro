@@ -1,0 +1,7 @@
+{
+  "buildCommand": "echo 'Build completed'",
+  "outputDirectory": "public",
+  "installCommand": "echo 'No dependencies to install'",
+  "framework": null,
+  "devCommand": "python -m http.server 8000"
+}

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "python -m http.server 8000",
-    "build": "echo 'Build process would be implemented here for production deployment'",
+    "build": "cp *.html public/ && cp -r components public/ && cp -r css public/ && cp -r js public/",
     "serve": "python -m http.server 8000",
     "validate": "echo 'Validating HTML components...'",
     "optimize": "echo 'Optimizing images and assets...'"
