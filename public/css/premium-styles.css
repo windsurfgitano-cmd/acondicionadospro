@@ -16,26 +16,27 @@
 /* Base Styles */
 * {
     cursor: none;
-}
-
-@media (max-width: 768px) {
-    * {
-        cursor: auto;
-    }
-    .custom-cursor,
-    .cursor-follower {
-        display: none !important;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container max-width and centering */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
 }
 
 /* Custom Cursor */
@@ -435,6 +436,83 @@ input[type="range"]::-webkit-slider-thumb:hover {
 @keyframes morph {
     0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
     50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* Section Spacing */
+section {
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+}
+
+/* Hero Section - Full width */
+#hero {
+    padding: 0;
+    margin: 0;
+}
+
+/* Services Section */
+#services {
+    padding: 6rem 2rem;
+}
+
+/* Calculator Section */
+#calculator {
+    padding: 6rem 2rem;
+}
+
+/* Process Section */
+#process {
+    padding: 6rem 2rem;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 6rem 2rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem 2rem;
+}
+
+/* Brands Section */
+.brands-section {
+    padding: 4rem 2rem;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 4rem 2rem;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+    #services,
+    #calculator,
+    #process,
+    #testimonials,
+    #contact {
+        padding: 4rem 1rem;
+    }
+    
+    .brands-section,
+    .stats-section {
+        padding: 3rem 1rem;
+    }
+    
+    footer {
+        padding: 3rem 1rem 1rem;
+    }
 }
 
 /* Counter Styles */
