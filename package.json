@@ -1,0 +1,43 @@
+{
+  "name": "acondicionadospro",
+  "version": "2.0.0",
+  "description": "Sitio web modular para servicios de instalación de aire acondicionado en Santiago",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Build process would be implemented here for production deployment'",
+    "serve": "python -m http.server 8000",
+    "validate": "echo 'Validating HTML components...'",
+    "optimize": "echo 'Optimizing images and assets...'"
+  },
+  "keywords": [
+    "aire acondicionado",
+    "climatización",
+    "instalación",
+    "santiago",
+    "chile",
+    "servicios",
+    "residencial",
+    "comercial",
+    "industrial",
+    "modular",
+    "component-based"
+  ],
+  "author": "ACONDICIONADOSPRO",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/acondicionadospro"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

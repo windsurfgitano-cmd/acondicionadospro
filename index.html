@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ACONDICIONADOSPRO - Instalación Profesional de Aire Acondicionado en Santiago</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1269e2",
+                        "accent-orange": "#f97316",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d131b] dark:text-slate-100 font-display transition-colors duration-300">
+    
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="flex flex-col items-center gap-4">
+            <div class="relative">
+                <div class="w-16 h-16 border-4 border-primary/20 rounded-full"></div>
+                <div class="absolute top-0 left-0 w-16 h-16 border-4 border-primary rounded-full animate-spin border-t-transparent"></div>
+            </div>
+            <span class="text-primary font-bold">ACONDICIONADOSPRO</span>
+        </div>
+    </div>
+
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero Component -->
+        <div id="hero-container"></div>
+
+        <!-- Stats Component -->
+        <div id="stats-container"></div>
+
+        <!-- Services Component -->
+        <div id="services-container"></div>
+
+        <!-- Calculator Component -->
+        <div id="calculator-container"></div>
+
+        <!-- Process Component -->
+        <div id="process-container"></div>
+
+        <!-- Brands Component -->
+        <div id="brands-container"></div>
+
+        <!-- Testimonials Component -->
+        <div id="testimonials-container"></div>
+
+        <!-- Contact Component -->
+        <div id="contact-container"></div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- WhatsApp Component -->
+    <div id="whatsapp-container"></div>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Component Loader -->
+    <script>
+        // Load all HTML components
+        async function loadComponents() {
+            const components = [
+                { id: 'header-container', file: 'components/header.html' },
+                { id: 'hero-container', file: 'components/hero.html' },
+                { id: 'stats-container', file: 'components/stats.html' },
+                { id: 'services-container', file: 'components/services.html' },
+                { id: 'calculator-container', file: 'components/calculator.html' },
+                { id: 'process-container', file: 'components/process.html' },
+                { id: 'brands-container', file: 'components/brands.html' },
+                { id: 'testimonials-container', file: 'components/testimonials.html' },
+                { id: 'contact-container', file: 'components/contact.html' },
+                { id: 'footer-container', file: 'components/footer.html' },
+                { id: 'whatsapp-container', file: 'components/whatsapp.html' }
+            ];
+
+            for (const component of components) {
+                try {
+                    const response = await fetch(component.file);
+                    const html = await response.text();
+                    document.getElementById(component.id).innerHTML = html;
+                } catch (error) {
+                    console.error(`Error loading component ${component.file}:`, error);
+                }
+            }
+        }
+
+        // Initialize components when DOM is ready
+        document.addEventListener('DOMContentLoaded', loadComponents);
+    </script>
+</body>
+</html>
